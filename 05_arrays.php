@@ -108,22 +108,81 @@ echo '</pre>';
 // ============================================
 // Associative arrays
 // ============================================
+echo "<u> Associative arrays: </u>"; 
 
 // Create an associative array
+$person = [
+    'name' => 'Shohel',
+    'surname' => 'Rana',
+    'age' => 25,
+    'hobbies' => ['Play cricket', 'Programming'],
+];
+echo '<pre>';
+var_dump($person);
+echo '</pre>';
 
 // Get element by key
+echo $person['name'] . "<br>";
 
 // Set element by key
+$person['address'] = 'Dhaka';
+echo '<pre>';
+var_dump($person);
+echo '</pre>';
 
 // Null coalescing assignment operator. Since PHP 7.4
+$person['channer'] ??= 'Programming Hub';
+echo '<pre>';
+var_dump($person);
+echo '</pre>';
 
 // Check if array has specific key
+echo '<pre>';
+var_dump(isset($person['name']));
+echo '</pre>';
+
+echo '<pre>';
+var_dump(isset($person['Car']));
+echo '</pre>';
 
 // Print the keys of the array
+echo '<pre>';
+var_dump(array_keys($person));
+echo '</pre>';
 
 // Print the values of the array
+echo '<pre>';
+var_dump(array_values($person));
+echo '</pre>';
 
 // Sorting associative arrays by values, by keys
+ksort($person);
+echo '<pre>';
+var_dump($person); // sort by key ASC alphabetic order
+echo '</pre>';
 
+krsort($person);
+echo '<pre>';
+var_dump($person); // sort by key DESC alphabetic order
+echo '</pre>';
+
+asort($person);
+echo '<pre>';
+print_r($person); // sort ASC alphabetic order by value
+echo '</pre>';
+
+arsort($person);
+echo '<pre>';
+print_r($person); // sort DESC alphabetic order by value
+echo '</pre>';
 
 // Two dimensional arrays
+$car = [
+    ['name'=>'BMW', 'color'=>'Blue', 'price'=>'10M'],
+    ['name'=>'Toyota', 'color'=>'White', 'price'=>'2M'],
+    ['name'=>'Audi', 'color'=>'Black', 'price'=>'12M'],
+];
+
+echo '<pre>';
+var_dump($car);
+echo '</pre>';
