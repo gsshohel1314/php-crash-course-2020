@@ -186,3 +186,13 @@ $car = [
 echo '<pre>';
 var_dump($car);
 echo '</pre>';
+
+$todos = [
+    ['title'=>'todo ttile 1', 'completed'=>true],
+    ['title'=>'todo ttile 2', 'completed'=>true],
+    ['title'=>'todo ttile 2', 'completed'=>false],
+];
+
+echo '<pre>';
+var_dump($todos);
+echo '</pre>';
